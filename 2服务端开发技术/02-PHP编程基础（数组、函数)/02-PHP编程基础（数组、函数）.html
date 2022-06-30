@@ -1,0 +1,1442 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style>@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden] {
+  display: none;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+h1 {
+  font-size: 2em;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+pre,code,p code,li code{font-family:Menlo,Monaco,"Andale Mono","lucida console","Courier New",monospace}
+
+pre{-webkit-border-radius:0.4em;-moz-border-radius:0.4em;-ms-border-radius:0.4em;-o-border-radius:0.4em;border-radius:0.4em;border:1px dashed #FAEBD7;line-height:1.7em;font-size:13px;margin-bottom:2.1em;padding:.8em 1em;color:#586e75;overflow:auto; background-color:#F5FFFA;}
+
+p code,li code{display:inline-block;white-space:no-wrap;background:#fff;font-size:0.9rem;line-height:1.7em;color:#555;border:1px solid #ddd;-webkit-border-radius:0.4em;-moz-border-radius:0.4em;-ms-border-radius:0.4em;-o-border-radius:0.4em;border-radius:0.4em;padding:0.3em;margin:-1px 4px;}
+p pre code,li pre code{font-size:0.9rem !important;background:none;border:none}
+
+p, li {
+  line-height:1.7em;
+  font-family: "Nunito","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial;
+}
+li {
+  font-family: "Nunito","HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial;
+  line-height:1.5em;
+}
+kbd,
+samp {
+  font-family: monospace, serif;
+  font-size: 13px;
+}
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  max-width: 100%;
+  padding: 0.8em 0em;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 0;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-family: 'PT Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: 700;
+}
+html {
+  color: #657b83;
+  margin: 1em;
+}
+body {
+  color: #657b83;
+  margin: 0 auto;
+  max-width: 30cm;  /*  原始: 23cm   */
+  padding: 1em; /*  原始: 1em   */
+}
+
+a {
+  color: #b58900;
+}
+a:visited {
+  color: #cb4b16;
+}
+a:hover {
+  color: #cb4b16;
+}
+h1 {
+  color: #d33682;
+}
+h2 {
+  color:#d36c9e;
+}
+h3 {
+  color:#7fbfca;
+}
+h4 {
+  color:#0ab198
+}
+h5 {
+  color: #859900;
+}
+h6 {
+  color: #009926;
+}
+/* pre {
+  background-color: #fdf6e3;
+  color: #657b83;
+  border: 1pt solid #93a1a1;
+  padding: 1em;
+  box-shadow: 5pt 5pt 8pt #eee8d5;
+} */
+
+h1 {
+  font-size: 1.8em;
+}
+h2 {
+  font-size: 1.6em;
+}
+h3 {
+  font-size: 1.4em;
+}
+h4 {
+  font-size: 1.2em;
+}
+h5 {
+  font-size: 1.15em;
+}
+h6 {
+  font-size: 1.15em;
+}
+
+table {
+
+  overflow: auto;
+  box-shadow: 5pt 5pt 8pt #eee8d5;
+}
+
+table th {
+  font-weight: bold;
+  background:#EEE8D6;
+}
+
+table th,
+table td {
+  padding: 6px 13px;
+  border: 1px solid #C7CAC1;
+}
+
+table tr {
+  border-top: 1px solid #C7CAC1;
+}
+
+table tr:nth-child(2n) {
+}
+table td{ word-wrap: break-word !important; word-break: break-all !important; }
+
+.tag {
+  color: #d33682;
+  padding: 0 0.2em;
+}
+.todo,
+.next,
+.done {
+  color: #fdf6e3;
+  background-color: #dc322f;
+  padding: 0 0.2em;
+}
+.tag {
+  -webkit-border-radius: 0.35em;
+  -moz-border-radius: 0.35em;
+  border-radius: 0.35em;
+}
+.TODO {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #2aa198;
+}
+.NEXT {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #268bd2;
+}
+.ACTIVE {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #268bd2;
+}
+.DONE {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #859900;
+}
+.WAITING {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #cb4b16;
+}
+.HOLD {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #d33682;
+}
+.NOTE {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #d33682;
+}
+.CANCELLED {
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  background-color: #859900;
+}
+
+@media (max-width: 540px) {
+  html{margin: 0 auto; padding: 4px;}
+}
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #F5FFFA;
+  color: #657b83;
+  -webkit-text-size-adjust: none;
+}
+
+.hljs-comment,
+.diff .hljs-header,
+.hljs-doctype,
+.hljs-pi,
+.lisp .hljs-string,
+.hljs-javadoc {
+  color: #93a1a1;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-winutils,
+.method,
+.hljs-addition,
+.css .hljs-tag,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-command,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-rules .hljs-value,
+.hljs-phpdoc,
+.hljs-dartdoc,
+.tex .hljs-formula,
+.hljs-regexp,
+.hljs-hexcolor,
+.hljs-link_url {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-localvars,
+.hljs-chunk,
+.hljs-decorator,
+.hljs-built_in,
+.hljs-identifier,
+.vhdl .hljs-literal,
+.hljs-id,
+.css .hljs-function {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.smalltalk .hljs-number,
+.hljs-constant,
+.hljs-class .hljs-title,
+.hljs-parent,
+.hljs-type,
+.hljs-link_reference {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-preprocessor,
+.hljs-preprocessor .hljs-keyword,
+.hljs-pragma,
+.hljs-shebang,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.diff .hljs-change,
+.hljs-special,
+.hljs-attr_selector,
+.hljs-subst,
+.hljs-cdata,
+.css .hljs-pseudo,
+.hljs-header {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-deletion,
+.hljs-important {
+  color: #dc322f;
+}
+
+/* Solarized Violet */
+.hljs-link_label {
+  color: #6c71c4;
+}
+
+.tex .hljs-formula {
+  background: #eee8d5;
+}
+
+
+/* PrismJS 1.14.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript */
+/**
+ * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/chriskempson/tomorrow-theme
+ * @author Rose Pritchard
+ */
+
+ code[class*="language-"],
+ pre[class*="language-"] {
+   color: rgb(3, 185, 176);
+   background: none;
+   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+   text-align: left;
+   white-space: pre;
+   word-spacing: normal;
+   word-break: normal;
+   word-wrap: normal;
+   line-height: 1.5;
+ 
+   -moz-tab-size: 4;
+   -o-tab-size: 4;
+   tab-size: 4;
+ 
+   -webkit-hyphens: none;
+   -moz-hyphens: none;
+   -ms-hyphens: none;
+   hyphens: none;
+ 
+ }
+ 
+ /* Code blocks */
+ pre[class*="language-"] {
+   padding: 1em;
+   margin: .5em 0;
+   overflow: auto;
+ }
+ 
+ :not(pre) > code[class*="language-"],
+ pre[class*="language-"] {
+   background: #e8f5f3a4;
+ }
+ 
+ /* Inline code */
+ :not(pre) > code[class*="language-"] {
+   padding: .1em;
+   border-radius: .3em;
+   white-space: normal;
+ }
+ 
+ .token.comment,
+ .token.block-comment,
+ .token.prolog,
+ .token.doctype,
+ .token.cdata {
+   color: #999;
+ }
+ 
+ .token.punctuation {
+   color: #e2777be3;
+ }
+ 
+ .token.tag,
+ .token.attr-name,
+ .token.namespace,
+ .token.deleted {
+   color: #e2777be3;
+ }
+ 
+ .token.function-name {
+   color: #6196cc;
+ }
+ 
+ .token.boolean,
+ .token.number,
+ .token.function {
+   color: #f08d49;
+ }
+ 
+ .token.property,
+ .token.class-name,
+ .token.constant,
+ .token.symbol {
+   color: #f8c555;
+ }
+ 
+ .token.selector,
+ .token.important,
+ .token.atrule,
+ .token.keyword,
+ .token.builtin {
+   color: #cc99cd;
+ }
+ 
+ .token.string,
+ .token.char,
+ .token.attr-value,
+ .token.regex,
+ .token.variable {
+   color: #7ec699;
+ }
+ 
+ .token.operator,
+ .token.entity,
+ .token.url {
+   color: #67cdcc;
+ }
+ 
+ .token.important,
+ .token.bold {
+   font-weight: bold;
+ }
+ .token.italic {
+   font-style: italic;
+ }
+ 
+ .token.entity {
+   cursor: help;
+ }
+ 
+ .token.inserted {
+   color: green;
+ }
+ 
+ pre[class*="language-"].line-numbers {
+     position: relative;
+     padding-left: 3.8em;
+     counter-reset: linenumber;
+ }
+ 
+ pre[class*="language-"].line-numbers > code {
+     position: relative;
+     white-space: inherit;
+ }
+ 
+ .line-numbers .line-numbers-rows {
+     position: absolute;
+     pointer-events: none;
+     top: 0;
+     font-size: 100%;
+     left: -3.8em;
+     width: 3em; /* works for line-numbers below 1000 lines */
+     letter-spacing: -1px;
+     border-right: 1px solid #999;
+ 
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ 
+ }
+ 
+     .line-numbers-rows > span {
+         pointer-events: none;
+         display: block;
+         counter-increment: linenumber;
+     }
+ 
+         .line-numbers-rows > span:before {
+             content: counter(linenumber);
+             color: #999;
+             display: block;
+             padding-right: 0.8em;
+             text-align: right;
+         }
+ 
+.markdown-body blockquote {
+  font-style: italic;
+  position: relative;
+  font-size: 1.1em;
+  line-height: 1.4em;
+  padding-left: 0.5em;
+  font-family: georgia,serif;
+  color: #000b0c4e;
+  /* border-left: 5px solid rgba(170,170,170,0.5); */
+}
+
+blockquote:before {
+  content: "\201C";
+  padding-bottom: 3px;
+  font-size: 35px;
+  margin-left: -20px;
+  font-family: georgia,serif;
+  color: rgba(170,170,170,1.0);
+}</style><style>.mweb-charts{background:#fff;}
+body{ box-sizing: border-box;
+    margin: 0 auto;
+    padding: 28px}
+@media print{
+    code,pre,pre code{
+        overflow: visible; word-wrap: break-word !important;
+    }
+    html,body{margin:0;padding:4px;}
+}
+
+</style><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/line-numbers/prism-line-numbers.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs@1.24.1/plugins/autoloader/prism-autoloader.min.js"></script><script>window.MathJax = {     tex: { tags: 'ams' },     startup: {     pageReady() {       return MathJax.startup.defaultPageReady().then(function () {          window.mweb_mathjax_ready_val = 'yes';          if(window.mweb_mathjax_ready !== undefined){ mweb_mathjax_ready(); }       });     }   }};document.addEventListener('DOMContentLoaded', function(event) {    if (typeof Prism != 'undefined') {         Prism.highlightAll();     }});window.mweb_mathjax_ready_val = '';function theMWebMathJaxRenderIsReady(key){ return window.mweb_mathjax_ready_val; }</script><script>document.addEventListener('DOMContentLoaded', function(event) {window.mweb_mathjax_ready_val = 'yes';})</script></head><body><div id='markdown_content' class='markdown-body'><h1><a id="php%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80%EF%BC%88%E6%95%B0%E7%BB%84%E3%80%81%E5%87%BD%E6%95%B0%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHP编程基础（数组、函数）</h1>
+<h2><a id="%E5%9F%BA%E7%A1%80%E8%A1%A5%E5%85%85" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>基础补充</h2>
+<h3><a id="var-dump" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>var_dump()</h3>
+<p>有时候，我们除了想要查看某个变量的内容，可能还需要查看变量的类型等一些结构化的信息，那么此时可以使用 <code>var_dump()</code> 函数来进行输出。</p>
+<blockquote>
+<p>var_dump () 函数可以输出变量的相关信息，会显示变量的结构化信息，包括其数据类型、值、长度，元素的个数，它是用于调试代码的，没有返回值。</p>
+</blockquote>
+<p><strong>示例1：</strong></p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+    $a = array(1, 2, array(&quot;a&quot;, &quot;b&quot;, &quot;c&quot;));
+    var_dump($a);
+?&gt;
+</code></pre>
+<p>输出的结果是：</p>
+<p><code>array(3) { [0]=&gt; int(1) [1]=&gt; int(2) [2]=&gt; array(3) { [0]=&gt; string(1) &quot;a&quot; [1]=&gt; string(1) &quot;b&quot; [2]=&gt; string(1) &quot;c&quot; } }</code></p>
+<p><strong>示例2：</strong></p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+    $b = 3.1;
+    $c = true;
+    var_dump($b, $c);
+?&gt;
+</code></pre>
+<p>输出的结果是：</p>
+<p><code>float(3.1) bool(true)</code></p>
+<h3><a id="%E9%A2%84%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%EF%BC%88%E8%B6%85%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%EF%BC%89" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>预定义变量（超全局变量）</h3>
+<p>预定义变量即系统自己定义好的变量，也就是系统内置的一些变量，我们可以直接使用。</p>
+<p>在php中，我们自定义的变量的作用域一般分两种：全局作用域（函数外），局部作用域（函数内）。<br />
+不过预定义变量的作用域称为 <font color=green><strong>“超全局作用域”</strong> </font> ：<code>全局作用域 + 局部作用域</code>，即 <font color=green><strong>函数内外全都可用</strong></font> 。因此，预定义变量也称为：<strong><code>超全局变量</code></strong></p>
+<p><strong>PHP 超级全局变量列表:</strong></p>
+<table>
+<thead>
+<tr>
+<th>预定义变量</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$GLOBALS</td>
+<td>用于记录全局变量</td>
+</tr>
+<tr>
+<td>$_SERVER</td>
+<td>记录服务器端与客户端的相关信息</td>
+</tr>
+<tr>
+<td>$_REQUEST</td>
+<td>用于接收前台表单使用get或post方式提交的数据</td>
+</tr>
+<tr>
+<td>$_POST</td>
+<td>用于接收前台表单使用post方式提交的数据</td>
+</tr>
+<tr>
+<td>$_GET</td>
+<td>用于接收前台表单使用get方式提交的数据</td>
+</tr>
+<tr>
+<td>$_FILES</td>
+<td>记录用户上传的文件信息</td>
+</tr>
+<tr>
+<td>$_ENV</td>
+<td>一个包含服务器端环境变量的数组</td>
+</tr>
+<tr>
+<td>$_COOKIE</td>
+<td>一种会话技术</td>
+</tr>
+<tr>
+<td>$_SESSION</td>
+<td>一种会话技术</td>
+</tr>
+</tbody>
+</table>
+<p>如下，我们可以输出 <code>$_SERVER</code> 变量，如下：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+    echo '&lt;pre&gt;';
+    print_r($_SERVER);
+?&gt;
+</code></pre>
+<p>结果如下：</p>
+<pre class="line-numbers"><code class="language-php">Array
+(
+    [HTTP_HOST] =&gt; localhost:8080
+    [HTTP_CONNECTION] =&gt; keep-alive
+    [HTTP_CACHE_CONTROL] =&gt; max-age=0
+    [HTTP_SEC_CH_UA] =&gt; &quot;Chromium&quot;;v=&quot;94&quot;, &quot;Google Chrome&quot;;v=&quot;94&quot;, &quot;;Not A Brand&quot;;v=&quot;99&quot;
+    [HTTP_SEC_CH_UA_MOBILE] =&gt; ?0
+    [HTTP_SEC_CH_UA_PLATFORM] =&gt; &quot;macOS&quot;
+    [HTTP_UPGRADE_INSECURE_REQUESTS] =&gt; 1
+    [HTTP_USER_AGENT] =&gt; Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36
+    [HTTP_ACCEPT] =&gt; text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    [HTTP_SEC_FETCH_SITE] =&gt; none
+    [HTTP_SEC_FETCH_MODE] =&gt; navigate
+    [HTTP_SEC_FETCH_USER] =&gt; ?1
+    [HTTP_SEC_FETCH_DEST] =&gt; document
+    [HTTP_ACCEPT_ENCODING] =&gt; gzip, deflate, br
+    [HTTP_ACCEPT_LANGUAGE] =&gt; zh-CN,zh;q=0.9,en;q=0.8
+    [PATH] =&gt; /usr/bin:/bin:/usr/sbin:/sbin
+    [SERVER_SIGNATURE] =&gt; 
+    [SERVER_SOFTWARE] =&gt; Apache
+    [SERVER_NAME] =&gt; localhost
+    [SERVER_ADDR] =&gt; ::1
+    [SERVER_PORT] =&gt; 8080
+    [REMOTE_ADDR] =&gt; ::1
+    [DOCUMENT_ROOT] =&gt; /Applications/MAMP/htdocs
+    [SERVER_ADMIN] =&gt; you@example.com
+    [SCRIPT_FILENAME] =&gt; /Applications/MAMP/htdocs/PHP_Demo/action.php
+    [REMOTE_PORT] =&gt; 51957
+    [GATEWAY_INTERFACE] =&gt; CGI/1.1
+    [SERVER_PROTOCOL] =&gt; HTTP/1.1
+    [REQUEST_METHOD] =&gt; GET
+    [QUERY_STRING] =&gt; 
+    [REQUEST_URI] =&gt; /PHP_Demo/action.php
+    [SCRIPT_NAME] =&gt; /PHP_Demo/action.php
+    [PHP_SELF] =&gt; /PHP_Demo/action.php
+    [REQUEST_TIME_FLOAT] =&gt; 1633955140.264
+    [REQUEST_TIME] =&gt; 1633955140
+    [argv] =&gt; Array
+        (
+        )
+
+    [argc] =&gt; 0
+)
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong></p>
+</blockquote>
+<blockquote>
+<p><code>print_r()</code> 函数，可以输出标量及复合数据类型。但是布尔值还是会被转换成0和1。</p>
+</blockquote>
+<h3><a id="%E9%AD%94%E6%9C%AF%E5%B8%B8%E9%87%8F" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>魔术常量</h3>
+<p>php中定义了一组魔术常量用来获取相关信息</p>
+<table>
+<thead>
+<tr>
+<th>常量</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__FILE__</code></td>
+<td>用于获取当前文件完整路径及文件名</td>
+</tr>
+<tr>
+<td><code>__DIR__</code></td>
+<td>用于获取当前文件所在目录的路径</td>
+</tr>
+<tr>
+<td><code>__LINE__</code></td>
+<td>用于获取当前行号</td>
+</tr>
+<tr>
+<td><code>__FUNCTION__</code></td>
+<td>用于获取当前函数的函数名</td>
+</tr>
+<tr>
+<td><code>__METHOD__</code></td>
+<td>用于获取当前方法的方法名</td>
+</tr>
+<tr>
+<td><code>__CLASS__</code></td>
+<td>用于获取当前类的类名</td>
+</tr>
+<tr>
+<td><code>__NAMESPACE__</code></td>
+<td>用于获取当前空间的空间名</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例：</strong></p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+  echo __FILE__,'&lt;br&gt;';
+  echo __DIR__,'&lt;br&gt;';
+  echo __LINE__;
+
+// 输出
+//D:\xampp\htdocs\studydemo\d1.php
+//D:\xampp\htdocs\studydemo
+//4
+</code></pre>
+<h2><a id="string" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>string</h2>
+<p>字符串是使用单引号或者双引号括起来的0个或多个字符。</p>
+<h3><a id="%E5%8D%95%E5%8F%8C%E5%BC%95%E5%8F%B7%E5%8C%BA%E5%88%AB" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>单双引号区别</h3>
+<ul>
+<li>
+<p>在字符串中，<font color=green><strong>双引号可以识别变量</font>，<font color=hotpink>单引号不识别变量</strong></font></p>
+</li>
+<li>
+<p>在单引号字符串中的变量和特殊字符的转义序列将不会被替换。</p>
+</li>
+<li>
+<p>用双引号定义的字符串最重要的特征是变量会被解析。</p>
+</li>
+</ul>
+<pre class="line-numbers"><code class="language-php">$a = 1 ;
+$b = ' 123  $a ' ;
+$c = &quot; 123 $a &quot; ;
+
+//得到输出结果：
+123 $a
+123 1
+</code></pre>
+<h3><a id="%E8%BD%AC%E6%8D%A2%E6%88%90%E5%AD%97%E7%AC%A6%E4%B8%B2" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>转换成字符串</h3>
+<p>一个值可以通过在其前面 <font color=green><strong>拼接上 string 的值</strong></font> 或用 <font color=green><strong><code>strval()</code> 函数</strong></font> 来转化成字符串。在一个需要字符串的表达式中，会自动转换为 string。</p>
+<blockquote>
+<p><strong>注意：</strong></p>
+</blockquote>
+<blockquote>
+<p>null 总是被转变成空字符串。</p>
+</blockquote>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+  $val1 = &quot;&quot; . 3;
+  var_dump($val1); // 结果：string(1) &quot;3&quot;
+  $val2 = strval(null);
+  var_dump($val2); // 结果: string(0) &quot;&quot;
+?&gt;
+</code></pre>
+<h3><a id="heredoc" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>heredoc</h3>
+<p><code>&lt;&lt;&lt;</code>：定义字符串，主要应用场景是定义大段的文本。</p>
+<p>在该运算符之后要提供一个标识符，然后换行。接下来是字符串 string 本身，最后要用前面定义的标识符作为结束标志（即开始标识符需要和结束标识符保持一致）。</p>
+<blockquote>
+<p><strong>注意：</strong><br />
+结束时所引用的标识符必须在该行的第一列，而且，标识符的命名也要像其它标签一样遵守 PHP 的规则：只能包含字母、数字和下划线，并且必须以字母和下划线作为开头。</p>
+</blockquote>
+<p><strong>语法格式：</strong></p>
+<pre class="line-numbers"><code class="language-plain_text">&lt;&lt;&lt;标识符
+
+内容
+
+标识符;
+</code></pre>
+<p>如下：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+  $bar = &lt;&lt;&lt;EOT
+bar
+EOT;
+echo $bar;
+# 以上代码中，EOT为标识符，开始标识符和结束标识符必须一致都是EOT。
+# 结束标记必须要顶格写（前面不能有空格）
+?&gt;
+</code></pre>
+<blockquote>
+<p><strong>注意：</strong></p>
+<ul>
+<li>
+<p>开始标记和结束标记可以随意命名但是必须要一致</p>
+</li>
+<li>
+<p>结束标记必须要顶格写（前面不能有空格）</p>
+</li>
+</ul>
+</blockquote>
+<p><font color=hotpink><strong>错误用法：</strong></font></p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+  $bar = &lt;&lt;&lt;EOT
+bar
+  EOT;
+echo $bar;
+?&gt;
+</code></pre>
+<p><strong>使用场景：</strong></p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+  $dom = &lt;&lt;&lt;EOT
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang=&quot;en&quot;&gt;
+          &lt;head&gt;
+              &lt;meta charset=&quot;UTF-8&quot;&gt;
+              &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+              &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+              &lt;title&gt;Document&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+              &lt;h1&gt;heredoc&lt;/h1&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+EOT;
+echo $dom;
+?&gt;
+</code></pre>
+<h2><a id="%E6%95%B0%E7%BB%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数组</h2>
+<p>在 PHP 中，有三种类型的数组：</p>
+<ol>
+<li><strong>索引数组</strong> = 数组元素的下标是数值，这样的数组就是索引数组</li>
+<li><strong>关联数组</strong> = 数组元素的下标是字符串，这样的数组就是关联数组</li>
+<li><strong>多维数组</strong> = 包含一个或多个数组的数组，数组嵌套数组</li>
+</ol>
+<p>###语法</p>
+<p><strong>定义数组：</strong></p>
+<ol>
+<li>
+<p>自动分配 ID 键（索引数组）</p>
+<pre class="line-numbers"><code class="language-php">$array = array(&quot;bar&quot;,&quot;foo&quot;);
+
+// 自 PHP 5.4 起
+$array = [&quot;bar&quot;,&quot;foo&quot;];
+
+// 用 print_r() 调试输出
+// Array ( [0] =&gt; bar [1] =&gt; foo )
+</code></pre>
+</li>
+<li>
+<p>人工分配 ID 键（关联数组）</p>
+<pre class="line-numbers"><code class="language-php">$array = array(
+    &quot;foo&quot; =&gt; &quot;bar&quot;,
+    &quot;bar&quot; =&gt; &quot;foo&quot;,
+);
+
+// 自 PHP 5.4 起
+$array = [
+    &quot;foo&quot; =&gt; &quot;bar&quot;,
+    &quot;bar&quot; =&gt; &quot;foo&quot;,
+];
+
+// 用 print_r() 调试输出
+// Array ( [foo] =&gt; bar [bar] =&gt; foo )
+</code></pre>
+</li>
+<li>
+<p>键值对 key=&gt;value</p>
+<ul>
+<li>
+<p>数组中可以保存多个数据 (value，即：值)</p>
+</li>
+<li>
+<p>每个数据有唯一的编号 (key，即：键)</p>
+</li>
+<li>
+<p>每个键值对用逗号 <code>,</code> 分割</p>
+</li>
+</ul>
+<pre class="line-numbers"><code class="language-php"># 定义数组，a，b，c 为数据的 key
+$arr = ['a' =&gt; 1, 'b' =&gt; 2 , 'c' =&gt; 3] ;
+print_r($arr);
+# 也可以不写 key，由 php 自动生成，从 0 开始编号
+$arr = [ 1, 2, 3 ] ;
+print_r($arr);
+</code></pre>
+</li>
+</ol>
+<blockquote>
+<p><strong>思考：</strong></p>
+</blockquote>
+<blockquote>
+<pre class="line-numbers"><code class="language-php">$array[1] = &quot;bar&quot;;
+$array[3] = &quot;foo&quot;;
+
+echo $array[2];  // 会输出什么呢？
+</code></pre>
+</blockquote>
+<h3><a id="%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>多维数组</h3>
+<p>和其他编程语言一样，PHP 中的数组也可以嵌套，即多维数组：</p>
+<p><strong>索引数组嵌套索引数组：</strong></p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+$array = [
+  [1, 2, 3],
+  ['a', 'b', 'c']
+];
+echo $array[1][2]; # 输出：c
+?&gt;
+</code></pre>
+<p><strong>关联数组嵌套关联数组：</strong></p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+$array = [
+  '第一排' =&gt;
+  [
+    'a' =&gt; '张三',
+    'b' =&gt; '李四'
+  ],
+  '第二排' =&gt;
+  [
+    'c' =&gt; '王五',
+    'd' =&gt; '赵六'
+  ]
+];
+echo $array['第一排']['a']; # 输出：张三
+?&gt;
+</code></pre>
+<p>当然，索引数组和关联数组之间也可以互相嵌套:</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+$array = [
+  '第一排' =&gt;
+  [
+  '张三',
+  '李四'
+  ],
+  '第二排' =&gt;
+  [
+    'c' =&gt; '王五',
+    'd' =&gt; '赵六'
+  ]
+];
+echo $array['第一排'][0]; # 输出：张三
+?&gt;
+</code></pre>
+<h3><a id="%E6%95%B0%E7%BB%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数组增删改查</h3>
+<pre class="line-numbers"><code class="language-php">$arr = ['a' =&gt; 1, 'b' =&gt; 2 , 'c' =&gt; 3] ;
+
+// 增
+$arr['d'] = 4 ;
+
+// 改
+// 改跟 增 一样，如果这个键存在就是修改，不存在就是增加
+$arr['d'] = 4 ;
+
+// 删
+unset ($arr['c']) ;
+
+// 查
+echo $arr['a']
+</code></pre>
+<blockquote>
+<p><strong>Tips:</strong></p>
+<p>当我们取预定义变量中的值时，是需要加引号的，如：</p>
+<ul>
+<li><code>echo $_SERVER['REMOTE_ADDR'];</code></li>
+</ul>
+<p>但是当放在变量值中取值时，就不需要加引号了，如：</p>
+<ul>
+<li><code>$str = &quot;测试一下在变量值中取值$_SERVER[REMOTE_ADDR]&quot;;</code></li>
+</ul>
+<p>如果是拼接的写法，则还是需要添加引号，如：</p>
+<ul>
+<li><code>$str = &quot;测试一下在变量值中取值&quot; . $_SERVER['REMOTE_ADDR'];</code></li>
+</ul>
+</blockquote>
+<h3><a id="%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数组的遍历</h3>
+<p>可以使用普通<code>for</code>循环或者使用 <code>foreach ( )</code> 进行循环</p>
+<pre class="line-numbers"><code class="language-php">$arr = [0, 1 , 2 , 3 , 4 , 5 ];
+
+foreach ($arr as $k =&gt; $v){
+    echo $k , ' =' ,$v . &quot;&lt;br&gt;&quot;;
+}
+
+//输出
+//0 =0
+//1 =1
+//2 =2
+//3 =3
+//4 =4
+//5 =5
+</code></pre>
+<h3><a id="%E6%95%B0%E7%BB%84%E7%9A%84%E6%8C%87%E9%92%88" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数组的指针</h3>
+<ul>
+<li>
+<p><code>current($arr)</code>     用于获取 <strong>当前</strong> 指针所指向的 <strong>元素的值</strong></p>
+</li>
+<li>
+<p><code>key($arr)</code>           用于获取 <strong>当前</strong> 指针所指向的 <strong>元素的键名</strong></p>
+</li>
+<li>
+<p><code>next($arr) </code>         用于将数组的 <strong>指针下移</strong></p>
+</li>
+<li>
+<p><code>prev($arr) </code>         用于将数组的 <strong>指针上移</strong></p>
+</li>
+<li>
+<p><code>reset($arr)  </code>       用于将数组的指针 <strong>重置</strong> (归位，数组的指针默认位于 <strong>第1个元素</strong> )</p>
+</li>
+<li>
+<p><code>end($arr)  </code>         用于将数组的指针移到 <strong>最后一个元素</strong></p>
+</li>
+</ul>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+$arr = ['id'=&gt;1,'name'=&gt;'鼠标','price'=&gt;123];
+
+echo key($arr).'=&gt;'.current($arr); // id=&gt;1
+next($arr);
+echo key($arr).'=&gt;'.current($arr); // name=&gt;鼠标
+?&gt;
+</code></pre>
+<h3><a id="%E6%95%B0%E7%BB%84%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E6%96%B9%E6%B3%95" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数组常用操作方法</h3>
+<ul>
+<li>
+<p><code>count(数组)</code>    用于获取数组的长度</p>
+</li>
+<li>
+<p><code>array_keys()</code>   获取数组元素所有的键名</p>
+</li>
+<li>
+<p><code>array_values()</code>   获取数组元素所有的值</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+$arr = ['id'=&gt;1,'name'=&gt;'鼠标','price'=&gt;123];
+
+echo count($arr);// 3
+print_r(array_keys($arr)); // Array ( [0] =&gt; id [1] =&gt; name [2] =&gt; price ) 
+print_r(array_values($arr)); // Array ( [0] =&gt; 1 [1] =&gt; 鼠标 [2] =&gt; 123 )
+</code></pre>
+</li>
+<li>
+<p><code>array_key_exists(key，arr)</code>  用于判断某个键名是否存在与数组中，如果存在返回true,否则返回false；</p>
+</li>
+<li>
+<p><code>in_array(value,arr)</code>   用于判断某个键值是否存在与数组中，如果存在返回true，否则返回false；</p>
+</li>
+<li>
+<p><code>array_merge(数组1，数组2，....)</code>   用于合并数组</p>
+</li>
+<li>
+<p><code>sort()</code>   对数组按键值进行升序排序，但原下标不会变</p>
+</li>
+<li>
+<p><code>rsort()</code>  对数组按键值进行降序排序，但原下标不会变</p>
+</li>
+</ul>
+<h3><a id="%E6%95%B0%E7%BB%84%E7%9A%84%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数组的输出问题</h3>
+<p>我们可以通过 echo 来打印一些标量类型，那么对于数组这种复合类型，我们如何打印呢，是否可以使用 echo:</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+$arr = ['id'=&gt;1,'name'=&gt;'鼠标','price'=&gt;123];
+echo $arr;
+?&gt;
+</code></pre>
+<p><a href="">大家试一试...</a></p>
+<p>显然，我们不能通过 echo 来输出这种复合类型的数据，无法输出我们想要的内容，大家还记得 <code>print_r()</code> 函数吧，是的我们可以使用 print_r() 来输出函数：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+$arr = ['id'=&gt;1,'name'=&gt;'鼠标','price'=&gt;123];
+print_r($arr);
+?&gt;
+</code></pre>
+<p>结果为：</p>
+<p><code>Array ( [id] =&gt; 1 [name] =&gt; 鼠标 [price] =&gt; 123 )</code></p>
+<p>如果以上输出的内容还不够直观的话，那么我们可以在 <code>print_r()</code> 函数的前面再添加一个 <code>echo &quot;&lt;pre&gt;&quot;;</code> 语句：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+$arr = ['id'=&gt;1,'name'=&gt;'鼠标','price'=&gt;123];
+echo &quot;&lt;pre&gt;&quot;;
+print_r($arr);
+?&gt;
+</code></pre>
+<p>结果如下：</p>
+<pre class="line-numbers"><code class="language-php">Array
+(
+    [id] =&gt; 1
+    [name] =&gt; 鼠标
+    [price] =&gt; 123
+)
+</code></pre>
+<h2><a id="%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>函数</h2>
+<blockquote>
+<p>函数是指一段在一起的、可以做某一件事的程序，同一个函数可以被调用任意次。<br />
+在程序设计中，常将一些常用的功能模块编写成函数，放在函数库中供公共选用。要善于利用函数，减少重复编写程序段的工作量。</p>
+</blockquote>
+<p><a href="">回顾：在 JavaScript 中是如何定义函数的？</a></p>
+<p><strong>语法：</strong></p>
+<pre class="line-numbers"><code class="language-php">// 创建函数
+function functionName(形参列表)
+{
+    // 函数体
+    [return 值]
+}
+
+// 调用函数
+functionName();
+</code></pre>
+<p><strong>命名规范</strong></p>
+<ul>
+<li>php的函数名是不区分大小写的，但是建议书写时区分，小驼峰命名</li>
+<li>函数的名称应该见名知意</li>
+<li>函数名称以字母或下划线开头（不能以数字开头）</li>
+</ul>
+<p><strong>示例：</strong></p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+   function say(){
+       echo 'Hi~';
+   }
+   say();
+?&gt;
+</code></pre>
+<p>如果变量 <code>$fun</code> 的值是刚好是函数的名字，那么我们可以通过 <code>$fun()</code> 这种方式来调用该函数：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+   function say(){
+       echo 'Hi~';
+   }
+
+   $fun = 'say'; # 它的值刚好与上面 say() 函数的名字相同
+   $fun();
+?&gt;
+</code></pre>
+<p>当然对于普通变量也适用:</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+   $say = &quot;Hello&quot;;
+
+   $fun = 'say'; # 它的值刚好是上面 $say 变量名
+   echo $$fun;
+?&gt;
+</code></pre>
+<h3><a id="%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>函数参数</h3>
+<p>**形参：**函数定义时的参数就是形参。</p>
+<p>**实参：**函数调用你时的参数就是实参。</p>
+<p>示例：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+   function say($content){
+       echo 'Hi~'.$content;
+   }
+
+   say(&quot;你好&quot;);
+?&gt;
+    
+    // 形参是被动的接收数据，只对内部有效，对于外部是不可见的，而实参是主动向函数内部传递实际的数据
+</code></pre>
+<p>**形参默认值：**设置形参的时候可以给参数一个默认值，这样如果传递了该参数则使用传递的参数，如果没有传递则使用默认值</p>
+<p>示例：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+   $fn = function($content='Hi~'){
+       echo $content;
+   };
+   $fn();
+   $fn(&quot;你好&quot;);
+?&gt;
+</code></pre>
+<blockquote>
+<p><strong>注意：</strong></p>
+</blockquote>
+<blockquote>
+<p>由于参数传递是按顺序匹配，所以 <font color=hotpink><strong>默认参数一般是最后一个参数</strong></font></p>
+</blockquote>
+<p><strong>形参的引用传值：</strong></p>
+<p>php中函数的实参与形参之间也是一种赋值方式，<strong>默认是值传递</strong>，在PHP中可以在形参前面加上 <code>&amp;</code> 符号，将实参与形参之间默认的赋值传值更改为引用传值。</p>
+<p>我们来看一个例子，交换两个变量的值：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+// 交换两个变量的值
+function swapValue($a, $b){
+  $tmp = $a;
+  $a = $b;
+  $b = $tmp;
+}
+
+$x = 1;
+$y = 2;
+swapValue($x, $y);
+echo &quot;x：&quot; . $x . &quot;，y：&quot; . $y;
+?&gt;
+</code></pre>
+<p><a href="">思考：以上代码能否成功？</a></p>
+<p><strong>作如下的修改即可：</strong></p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+// 交换两个变量的值
+function swapValue(&amp;$a, &amp;$b){
+  $tmp = $a;
+  $a = $b;
+  $b = $tmp;
+}
+
+$x = 1;
+$y = 2;
+swapValue($x, $y);
+echo &quot;x：&quot; . $x . &quot;，y：&quot; . $y;
+?&gt;
+</code></pre>
+<h3><a id="%E5%8C%BF%E5%90%8D%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>匿名函数</h3>
+<p>没有名字的函数就是匿名函数，也称为闭包函数。</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+   function(){
+       echo '匿名函数';
+   };      // 如果是匿名函数，则结尾一定要有分号;
+?&gt;
+</code></pre>
+<p><strong>作用：</strong></p>
+<ul>
+<li>JS中匿名函数可以自调用(立即执行函数)，但是PHP中的函数是没有办法自调用的</li>
+<li>PHP中的匿名函数，主要作用是赋值给一个变量或者用于某个函数的参数(回调函数，callback)</li>
+</ul>
+<p>示例：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+  $fun = function(){
+    echo '匿名函数';
+  };      // 如果是匿名函数，则结尾一定要有分号;
+  $fun();
+?&gt;
+</code></pre>
+<h3><a id="php%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>PHP常用函数</h3>
+<h4><a id="empty" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>empty()</h4>
+<p>**简介：**empty () 函数用于检查一个变量是否为空，当一个变量并不存在，或者它的值等同于 FALSE ，那么它会被认为不存在，如果变量不存在，empty () 并不会产生警告。</p>
+<p><strong>语法：</strong><code>empty( $var );</code></p>
+<p>**返回值：**作为一个检查变量是否为空的函数。</p>
+<ul>
+<li>当变量为空时，返回 TRUE</li>
+<li>当变量不为空时，返回 FALSE</li>
+</ul>
+<blockquote>
+<p><strong>注意：</strong></p>
+<ul>
+<li>当字符串的值为 “0” 时，也会认为是空，返回 TRUE</li>
+<li>变量为空时是真，不为空时是假</li>
+</ul>
+</blockquote>
+<p><strong>被 empty () 函数 认为是空的值：</strong></p>
+<ul>
+<li>&quot;&quot; (空字符串)</li>
+<li>0 (作为整数的 0)</li>
+<li>0.0 (作为浮点数的 0)</li>
+<li>“0” (作为字符串的 0)</li>
+<li>NULL</li>
+<li>FALSE</li>
+<li>array () (一个空数组)</li>
+<li>$var; (一个声明了，但是没有赋值的变量)</li>
+</ul>
+<h4><a id="session" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>Session( )</h4>
+<p>**简介：**session 变量用于存储关于用户会话（session）的信息，或者更改用户会话（session）的设置。Session 变量存储单一用户的信息，并且对于应用程序中的所有页面都是可用的。</p>
+<p>在计算机上操作某个应用程序时，打开它，做些更改，然后关闭它。这很像一次对话（Session）。</p>
+<p>计算机不知道你是谁。它清楚你在何时打开和关闭应用程序。然而，在因特网上问题出现了：由于 HTTP 地址无法保持状态，Web 服务器并不知道你是谁以及你做了什么。</p>
+<p>PHP session 解决了这个问题，它通过在服务器上存储用户信息以便随后使用（比如用户名称、购买商品等）。然而，会话信息是临时的，在用户离开网站后将被删除。如果需要永久存储信息，可以把数据存储在数据库中。</p>
+<p>Session 的工作机制是：为每个访客创建一个唯一的 id (UID)，并基于这个 UID 来存储变量。UID 存储在 cookie 中，或者通过 URL 进行传导。</p>
+<p><strong>语法：</strong></p>
+<p><strong>1、开始 Session</strong></p>
+<p>在您把用户信息存储到 PHP session 中之前，首先必须启动会话。</p>
+<p>**注意：**session_start () 函数必须位于 <code>&lt;html&gt;</code> 标签之前；</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php session_start(); ?&gt;
+
+&lt;html&gt;
+&lt;/html&gt;
+</code></pre>
+<p><strong>2、存储 session 变量</strong></p>
+<p>存储和取回 session 变量的正确方法是使用 PHP $_SESSION 变量</p>
+<pre class="line-numbers"><code class="language-php">//存储
+&lt;?php
+    session_start();
+    // 存储 session 数据
+    $_SESSION['views']=1;
+?&gt;
+
+//输出
+&lt;?php  echo $_SESSION['views']; ?&gt;
+</code></pre>
+<p><strong>3、销毁 Session</strong></p>
+<p>删除 session 数据，可以使用 unset () 或 session_destroy () 函数。unset () 函数用于释放指定的 session 变量。</p>
+<pre class="line-numbers"><code class="language-php">//使用 unset()
+unset($_SESSION['views']);
+
+//使用 session()
+session_destroy();
+</code></pre>
+<h4><a id="header" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>header()</h4>
+<p>**简介：**header函数用于发送原生 HTTP 头。</p>
+<blockquote>
+<p><strong>注意：</strong></p>
+</blockquote>
+<blockquote>
+<p><code>header()</code> 必须在任何实际输出之前调用，不管是普通的 HTML 标签，还是文件或 PHP 输出的空行，空格。</p>
+</blockquote>
+<p><strong>示例：</strong></p>
+<pre class="line-numbers"><code class="language-php">// 1. 跳转页面
+header('Location:http://www.baidu.com');
+
+// 2. 在某个时候后执行跳转,单位:秒
+header( 'refresh:2; url=http://www.baidu.com' ) ;
+</code></pre>
+<h4><a id="file-exists" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>file_exists()</h4>
+<p><strong>简介：</strong><code>file_exists ()</code> 函数检查文件或目录是否存在。如果指定的文件或目录存在则返回 TRUE，否则返回 FALSE。</p>
+<p><strong>语法：</strong><code>file_exists( &quot;检查的路径&quot; )；</code></p>
+<h4><a id="%E6%95%B0%E5%80%BC%E7%9B%B8%E5%85%B3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>数值相关</h4>
+<p>取整函数主要有三种：ceil ()、floor ()、round ()</p>
+<ul>
+<li>
+<p><code>ceil()</code> ：进一法取整，向上取整，返回值是float类型</p>
+</li>
+<li>
+<p><code>floor()</code> ：舍去法取整，向下取整，返回值是float类型</p>
+</li>
+<li>
+<p><code>round()</code> ： 四舍五入取整，返回值是float类型</p>
+</li>
+</ul>
+<h4><a id="%E6%97%B6%E9%97%B4%E7%9B%B8%E5%85%B3" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>时间相关</h4>
+<h5><a id="date" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>date()</h5>
+<p>格式化时间信息</p>
+<p><strong>语法：</strong><code>date(format [, time])</code></p>
+<p><strong>说明：</strong></p>
+<ul>
+<li>format用于格式化时间的字符串</li>
+<li>time表示所需要格式化的时间戳，如果省略表示对当前时间进行格式化</li>
+</ul>
+<p>示例：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+echo date('Y-m-d H:i:s');   // 2021-09-26 05:21:16
+</code></pre>
+<blockquote>
+<p><strong>Tips：</strong></p>
+<p>如果发现PHP格式化日期显示出来的跟当前时间不一致，那么需要修改时区信息：修改php.ini里的date.timezone = Asia/Shanghai;</p>
+</blockquote>
+<h5><a id="time" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>time()</h5>
+<p>获取当前时间的时间戳，单位是<strong>秒</strong>。时间戳就是从时间原点【1970年1月1日0时0分0秒】至现在的一个秒数。</p>
+<p>示例：</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+echo time();   // 1632626071
+</code></pre>
+<h5><a id="microtime" class="anchor" aria-hidden="true"><span class="octicon octicon-link"></span></a>microtime()</h5>
+<p>获取毫秒数</p>
+<pre class="line-numbers"><code class="language-php">&lt;?php
+echo microtime();   //0.48144900 1632626184
+</code></pre>
+</div></body></html>
